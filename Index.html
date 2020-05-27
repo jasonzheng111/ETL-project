@@ -1,0 +1,104 @@
+<!-- This will be the index/initial  page -->
+<!DOCTYPE html> 
+<html lang = "us-en">
+<head>
+    <meta charset = "utf-8">
+    <!-- creating view for other devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- bootstrap styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> Latitude Analysis - [Index Page] </title>
+</head>
+<body>
+    <!-- Navigation creation -->
+    <div class = "navigation">
+        <nav class = "navbar fixed-top navbar-expand-lg navbar-light">
+        <a class = "navbar-brand" href = "index.html">Latitude</a>
+        <button class = "navbar-toggler border" type ="button" data-toggle = "collapse" data-target = "#navbarNavDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class = "navbar-toggler-icon"></span>
+        </button>
+    <!-- Dropdown toggle creation -->
+        <div class = "collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class = "navbar-nav ml-auto">
+                <li class = "nav-item dropdown">
+                    <a href = "#" class="nav-link dropdown-toggle" data-toggle = "dropdown" role = "button" id = "navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Plots</a>
+                    <div class = "dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class = "dropdown-item" href="temperature.html">Max Temperature</a>
+                        <a class = "dropdown-item" href="humidity.html">Humidity</a>
+                        <a class = "dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class = "dropdown-item" href="wind.html">Wind Speed</a>
+                    </div>
+                </li>
+    <!-- Other Nav creations -->
+                <li class="nav-items">
+                    <a class = "nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-items">
+                    <a class = "nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+<!-- Creation of a container for the word box and image of the summary  -->
+<div class="container">
+    <section class ="row">
+        <div class="col-lg-6 col-md-12">
+            <div class = "box" style = "padding-bottom: 20px;">
+            <h1 class = "title">Summary: Latitude vs X</h1>
+            <!-- Start of the text and image insertion for the summary -->
+            <img src="../Resources/assets/images/Fig1.png" class = "description-image rounded float-left">
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplsh
+            this analysis we first pulled data from the OpenWeatherMap API to assmble a dataset on over 500 cities.</p>
+            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors 
+            we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and
+            visualizations created as part of the analysis, as well as explinations and descriptions of any trends and correlations
+            wittnessed.</p>
+            </div> 
+        </div>
+        <!-- Visualizations  -->
+        <div class= "col-lg-4 col-md-12">
+            <section id= "imageNav-area">
+                <div class = "imageNav-content">
+                <h2 class = "imageNav-header">Visualizations</h2>
+                <div class = "container">
+                    <div class = "row" style = "padding-bottom: 20px;">
+                        <div class = "col-6">
+                            <a href = "temperature.html">
+                            <img title = "Latitdue vs. Max Temperature" class = "imageNav" src="../Resources/assets/images/Fig1.png">
+                            </a>
+                        </div>
+                        <div class = "col-6">
+                            <a href = "humidity.html">
+                                <img title = "Latitude vs. Humidity" class ="imageNav" src = "../Resources/assets/images/Fig2.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class = "row" style = "padding-bottom: 20px;">
+                        <div class = "col-6">
+                                <a href = "cloudiness.html">
+                                    <img title = "Latitude vs. Cloudiness" class = "imageNav" src = "../Resources/assets/images/Fig3.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "col-6">
+                            <a href = "wind.html">
+                                <img title = "Latitude vs Wind Speed" class = "imageNav" src = "../Resources/assets/images/Fig4.png">
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+            </section>
+        </div>
+    
+    </section>
+</div>
+    <!-- JavaScript from bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
